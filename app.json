@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/order/order",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "订餐小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home_green.png",
+        "text": "点餐主页"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "image/senior.png",
+        "selectedIconPath": "image/senior_green.png",
+        "text": "长者报餐"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "image/menu.png",
+        "selectedIconPath": "image/menu_green.png",
+        "text": "已点菜单"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "image/user.png",
+        "selectedIconPath": "image/user_green.png",
+        "text": "用户信息"
+      }
+    ]
+  }
+}

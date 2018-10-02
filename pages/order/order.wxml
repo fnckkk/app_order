@@ -1,0 +1,44 @@
+<!--pages/Order/Order.wxml-->
+<view class="swiper-container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item}}" class="img" bindtap="swipclick" binderror="imgErrorFunction" data-errorimg="{{index}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='flex-wrp' style="flex-direction:row;">
+  <view class='orderClassify'>
+    <text>点餐分类</text>
+  </view>
+  <view class='menuType' style="flex-direction:row;">
+    <view>
+      <text>当前菜谱：</text>
+    </view>
+    <view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="weui-input">{{array[index]}}</view>
+      </picker>
+    </view>
+  </view>
+</view>
+<view class='tittleView1'>
+  <text>按时间分类</text>
+</view>
+<view class='buttonsView1'>
+  <button type="default" plain="true" size="mini">早餐</button>
+  <button type="default" plain="true" size="mini" style='margin-left:40px'>午餐</button>
+  <button type="default" plain="true" size="mini" style='margin-left:40px'>晚餐</button>
+  <button type="default" plain="true" size="mini" style='margin-top:30rpx'>另点</button>
+  <button type="default" plain="true" size="mini" style='margin-left:40px;margin-top:30rpx'>查看全部</button>
+</view>
+<view id='typeClassifyView1' wx:if="{{isShowType}}">
+  <view class='tittleView1'>
+    <text>按类型分类</text>
+  </view>
+  <view class='buttonsView1'>
+    <button type="default" plain="true" size="mini">团餐</button>
+    <button type="default" plain="true" size="mini" style='margin-left:40px'>活动</button>
+  </view>
+</view>
